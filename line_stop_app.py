@@ -16,7 +16,7 @@ conn_string = f'DRIVER={{ODBC Driver 17 for SQL Server}};SERVER={server};DATABAS
 
 # Initialize session state variables
 if "input_groups" not in st.session_state:
-    st.session_state.input_groups = []  # Each group will be a dictionary { "problem": "", "cause": "", "interim_action": "" }
+    st.session_state.input_groups = {}  # Each group will be a dictionary { "problem": "", "cause": "", "interim_action": "" }
 if "search_clicked" not in st.session_state:
     st.session_state.search_clicked = False  # Track whether the search button was clicked
 if "filtered_data" not in st.session_state:
